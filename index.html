@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>A Rock, Paper, Scissors Showdown</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>A Rock, Paper, Scissors<br>
+    <i>Showdown</i></h1>
+  <button id = "show_rules_button" style="padding: 15px 32px">Rules</button>
+  <button id = "show_stats_button" style="padding: 15px 32px">Stats</button>
+  <div id="feedback">
+  </div>
+  <div id="rules" class="hidden">
+    <h2>Rules</h2>
+    Welcome to Rock, Paper, Scissors. The game is simple.
+    <ul>
+      <li>You choose which move to throw.</li>
+      <li>Browser will randomly generate a response move.</li>
+      <li>Paper beats Rock</li>
+      <li>Rock beats Scissors</li>
+      <li>Scissors beat Paper</li>
+      <li>You will see who wins</li>
+      <li>Change your throw to start the game over again</li>
+      <a href="http://worldrps.com/game-basics/the-official-rules-of-rock-paper-scissors/">Link to Official Rock, Paper, Scissors Rules</a>
+    </ul>
+  </div>
+  <div id="stats" class="hidden">
+    <h2>Stats</h2>
+    <u>Games played</u><br> <span id="games_played_span">0</span><br>
+    <u>Games won</u><br> <span id="games_won_span">0</span> <br>
+    <u>Win/Loss ratio</u><br> <span id="win_loss_span">0:0</span><br>
+    <u>B(r)owser Throw Stats</u><br><span id="opponent_stats_span">none</span><br>
+  <u>  <span class="player_name_span">name</span> Throw Stats</u><br><span id="player_stats_span">none</span>
+  </div>
+  <div id="enter_name" class="hidden">
+    <h2>Enter your Name:
+      <input type="text" id="player_name_input">
+      <button id = "enter_name_button">Submit Name</button>
+    </h2>
+  </div>
+  <div id="throw_choice" class="hidden">
+    <h2>Play the Game</h2>
+    <body>Make your move
+    <span class="player_name_span">Name</span>:</body>
+    <select id="throw_choice_select">
+  <option value="blank"></option>
+  <option value="rock">Rock</option>
+  <option value="paper">Paper</option>
+  <option value="scissors">Scissors</option>
+</select>
+<button id = "throw_choice_button">Throw</button>
+  </div>
+  <div id="game_results" class="hidden">
+    <h2>Showdown..</h2>
+    <body><browserResults>B(r)owser threw:
+      <span id="opponent_throw_span">rock/paper/scissors</span><br>
+      <image id="BrowserRockImg" src="BrowserRockImg.png" width="200" height="200" class="hidden">
+      <image id="BrowserPaperImg" src="BrowserPaperImg.png" width="200" height="200" class="hidden">
+      <image id="BrowserScissorsImg" src="BrowserScissorsImg.png" width="200" height="200" class="hidden">
+      </browserResults>
+      <span class="player_name_span">Name</span> threw:
+      <span id="player_throw_span">rock/paper/scissors</span><br>
+      <image id="playerRockImg" src="playerRockImg.png" width="200" height="200" class="hidden">
+      <image id="playerPaperImg" src="playerPaperImg.png" width="200" height="200" class="hidden">
+      <image id="playerScissorsImg" src="playerScissorsImg.png" width="200" height="200" class="hidden">
+      <h2>The winner is: <span id="results_span" >winner</span></h2>
+      <button id = "play_again_button" class="play_again">Play Again!</button>
+  </div>
+    </body>
+
+
+  <footer>
+    Created By Mary Kate McGranahan November 7, 2018<br>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
